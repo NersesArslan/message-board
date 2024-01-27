@@ -1,0 +1,13 @@
+
+html 
+ head
+  title 
+  link(rel='stylesheet', href='/stylesheets/style.css')
+body
+ h1
+ form(method= "POST" action="/new")
+  h2= 'Name'
+  input(type="text" name="messageUser")
+  h2= 'Message'
+  input(type="text" name="messageText")
+  button(type='submit')= 'Submit'
