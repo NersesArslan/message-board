@@ -1,0 +1,14 @@
+
+ 
+html 
+ head
+  title 
+  link(rel='stylesheet', href='/stylesheets/style.css')
+body
+ a(href="/new") Form Page
+ ul 
+  each key in messages 
+   h2= key.user
+   p= key.text
+   p= key.added
+  
