@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('navbar', {links: links}) %>
+    <h1>Message Page</h1>
+    <p><%= messages[id - 1].text %></p>
+  </body>
+</html>

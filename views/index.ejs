@@ -9,11 +9,13 @@
   <body>
     <%- include('navbar', {links: links}) %>
     <h1>Index Page</h1>
-    <ul>
+    <ul class="comment-section">
       <% messages.map((message) => { %>
-      <li><%= message.text %></li>
-      <li><%= message.user %></li>
-      <li><%= message.added %></li>
+      <div class="posts">
+        <li><%= message.text %></li>
+        <li><%= message.user %></li>
+        <li><%= message.added %></li>
+      </div>
       <% }) %>
     </ul>
   </body>

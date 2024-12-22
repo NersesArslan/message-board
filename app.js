@@ -12,10 +12,12 @@ app.set("view engine", "ejs");
 //Serving Static Assets
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
+app.use(express.urlencoded({ extended: true }));
 
 //adding routers to our app
 const newRouter = require("./routes/newRouter");
 const indexRouter = require("./routes/indexRouter");
+const messageRouter = require("./routes/messageRouter");
 
 app.locals.links = [
   { href: "/", text: "Home" },
@@ -24,6 +26,7 @@ app.locals.links = [
 
 app.use("/", indexRouter);
 app.use("/new", newRouter);
+app.use("/message", messageRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {
