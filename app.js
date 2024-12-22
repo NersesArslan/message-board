@@ -21,7 +21,7 @@ const messageRouter = require("./routes/messageRouter");
 
 app.locals.links = [
   { href: "/", text: "Home" },
-  { href: "new", text: "Form" },
+  { href: "/new", text: "Form" },
 ];
 
 app.use("/", indexRouter);

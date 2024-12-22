@@ -15,6 +15,7 @@
         <li><%= message.text %></li>
         <li><%= message.user %></li>
         <li><%= message.added %></li>
+        <a href="/message/<%= message.id%>"><button>Open</button></a>
       </div>
       <% }) %>
     </ul>

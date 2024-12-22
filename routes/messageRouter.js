@@ -6,7 +6,7 @@ let messages = db.messages;
 const { getmessageById } = require("../controllers/messageController");
 
 messageRouter.get("/", (req, res) => res.send("All messages"));
-// messageRouter.get("/:messageId", getmessageById);
+
 messageRouter.get("/:messageId", (req, res) => {
   res.render("message", {
     messages: messages,

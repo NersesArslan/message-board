@@ -14,7 +14,6 @@ indexRouter.post("/new", (req, res) => {
     user: req.body.user,
     added: new Date(),
   });
-  console.log(messages);
   res.redirect("/");
 });
 module.exports = indexRouter;
